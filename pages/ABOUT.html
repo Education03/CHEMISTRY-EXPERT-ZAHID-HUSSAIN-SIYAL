@@ -16,35 +16,59 @@
             background: linear-gradient(to bottom right, #4fd1c5, #818cf8, #60a5fa);
         }
 
-        /* Custom Navbar Color and Padding */
-        .navbar-custom {
-            background-color: red; /* Red background */
-            padding-left: 30px; /* Left padding */
-            padding-right: 30px; /* Right padding */
-        }
+/* Custom Navbar Color and Padding */
+.navbar-custom {
+    background-color: red; /* Red background */
+    padding-left: 2rem; /* Left padding using rem for better scalability */
+    padding-right: 2rem; /* Right padding using rem */
+}
 
-        /* Main Content */
-        .content {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-        }
+/* Main Content */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5vw; /* Padding based on the viewport width */
+}
 
-        .content .text-section {
-            width: 100%;
-            max-width: 600px;
-            text-align: center;
-            font-size: 1.25rem;
-        }
+/* Text Section within the Content */
+.content .text-section {
+    width: 100%;
+    max-width: 37.5rem; /* Max width of 600px converted to rem */
+    text-align: center;
+    font-size: 1.6rem; /* Increased font size for better readability */
+}
 
-        .content img {
-            width: 100%;
-            max-width: 500px;
-            height: auto;
-            border-radius: 10px;
-        }
+/* Images within Content */
+.content img {
+    width: 100%;
+    max-width: 31.25rem; /* Max width of 500px converted to rem */
+    height: auto;
+    border-radius: 0.625rem; /* Border radius in rem for consistent scaling */
+}
+
+/* Responsive Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .navbar-custom {
+        padding-left: 1.5rem; /* Reduce padding on smaller screens */
+        padding-right: 1.5rem;
+    }
+
+    .content {
+        padding: 4vw; /* Reduce padding slightly */
+    }
+
+    .content .text-section {
+        font-size: 1.4rem; /* Smaller font size on smaller screens */
+        max-width: 90%; /* Allow more space for text on smaller screens */
+    }
+
+    .content img {
+        max-width: 90%; /* Make the image fit better on smaller screens */
+    }
+}
+
 
         /* Footer */
         .footer {
